@@ -14,8 +14,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+/**
+ * Стартовая точка программы, отвечающая за инициализацию импорта сотрудников.
+ */
 public class Main {
 
+    /**
+     * Запуск основной логики обработки данных сотрудников.
+     *
+     * @param args аргументы командной строки (не используются)
+     */
     public static void main(String[] args) {
         try {
             List<Employee> staff = CSVImporter.loadEmployees("foreign_names.csv", ';');

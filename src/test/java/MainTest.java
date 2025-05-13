@@ -6,8 +6,14 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Юнит-тест для проверки импорта сотрудников.
+ */
 public class MainTest {
 
+    /**
+     * Проверяет успешную загрузку сотрудников из CSV.
+     */
     @Test
     public void verifyEmployeeParsing() throws Exception {
         List<Employee> result = CSVImporter.loadEmployees("foreign_names.csv", ';');

@@ -11,8 +11,19 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+/**
+ * Утилитарный класс для импорта сотрудников из CSV-файла.
+ */
 public class CSVImporter {
 
+    /**
+     * Загружает сотрудников из указанного CSV-файла.
+     *
+     * @param resourcePath путь к CSV-файлу в ресурсах
+     * @param delimiter    символ-разделитель
+     * @return список сотрудников
+     * @throws Exception при ошибках чтения или парсинга
+     */
     public static List<Employee> loadEmployees(String resourcePath, char delimiter) throws Exception {
         List<Employee> result = new ArrayList<>();
         Map<String, Department> deptMap = new HashMap<>();
